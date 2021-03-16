@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Useful", "Useful", "{33C127FD-1639-48BD-9784-9D42B22F5711}"
 	ProjectSection(SolutionItems) = preProject
 		CommandsCheatsheet.md = CommandsCheatsheet.md
+		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{09E7096E-5A81-404A-B0D1-2C395D6B01C3}"
