@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  starterui:
+    image: teksidia1.azurecr.io/starterui
+    build:
+      context: .
+      dockerfile: StarterUi/Dockerfile
+    depends_on:
+        - "starterapi"
+
+  starterapi:
+    image: teksidia1.azurecr.io/starterapi
+    build:
+      context: .
+      dockerfile: StarterApi/Dockerfile
+
+
+
