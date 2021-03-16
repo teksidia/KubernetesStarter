@@ -14,6 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Useful", "Useful", "{33C127
 		CommandsCheatsheet.md = CommandsCheatsheet.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{09E7096E-5A81-404A-B0D1-2C395D6B01C3}"
+	ProjectSection(SolutionItems) = preProject
+		demodeployment.yaml = demodeployment.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: starterapi
+spec:
+  selector:
+    matchLabels:
+      app: starterapi
+  template:
+    metadata:
+      labels:
+        app: starterapi
+    spec:
+      containers:
+      - name: starterapi
+        image: teksidia1.azurecr.io/starterapi
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: starterapi
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: starterapi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: starterui
+spec:
+  selector:
+    matchLabels:
+      app: starterui
+  template:
+    metadata:
+      labels:
+        app: starterui
+    spec:
+      containers:
+      - name: starterui
+        image: teksidia1.azurecr.io/starterui
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: starterui
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: starterui
